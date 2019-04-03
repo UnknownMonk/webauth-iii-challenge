@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
       .notNullable()
       .unique();
     tbl.string('password').notNullable();
-    tbl.text('department').notNulable();
+    tbl.string('department');
   });
 };
 

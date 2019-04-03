@@ -1,4 +1,4 @@
-const db = require('../auth/database/dbConfig');
+const db = require('../auth/dbConfig');
 
 module.exports = {
   add,
