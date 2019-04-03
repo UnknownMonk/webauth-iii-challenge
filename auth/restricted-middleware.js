@@ -46,14 +46,14 @@ function generateToken(user) {
   const payload = {
     subject: user.id,
     username: user.username,
-    roles: ['student', 'ta'] // pretend they come from database user.roles
+    roles: ['HR', 'CEO', 'CFO']
   };
-  // removed the const secret from this line <<<<<<<<<<<<<<<<<<<<<<<
+
   const options = {
     expiresIn: '1d'
   };
 
-  return jwt.sign(payload, secret, options); // returns valid token
+  return jwt.sign(payload, secret, options);
 }
 
 module.exports = router;
