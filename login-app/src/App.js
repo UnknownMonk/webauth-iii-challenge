@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
-
 import './App.css';
 import Login from './login/Login';
 import Users from './users/Users';
+import Signup from './signup/Signup';
 
 class App extends Component {
   render() {
@@ -23,6 +23,7 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/users" component={Users} />
+          <Route path="/signup" component={Signup} />
         </main>
       </>
     );

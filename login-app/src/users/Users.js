@@ -14,7 +14,11 @@ class Users extends React.Component {
         <h2>List of Users</h2>
         <ul>
           {this.state.users.map(u => (
+            
+            
             <li key={u.id}>{u.username}</li>
+            
+            
           ))}
         </ul>
       </>
@@ -26,6 +30,8 @@ class Users extends React.Component {
     axios
       .get(endpoint)
       .then(res => {
+        console.log(res.data);
+        
         this.setState({ users: res.data });
       })
       .catch(error => {
